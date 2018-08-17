@@ -26,6 +26,4 @@
         mysql_query($sql);
         header('location:../../index.php?quanly=quanlyloaisp&action=add&id=1');
     }
-
-    mysql_close($conn);
 ?>
