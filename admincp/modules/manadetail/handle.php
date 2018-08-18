@@ -25,9 +25,18 @@
     }
     else if(isset($_POST['suasanpham']))
     {
-        $sql = "update tbchitietsp set tensp='$tensp', giasp = $giasp, anhsp = $anhsp, thutusp='$thutusp'" 
-        . ", motasp = $motasp, loaisp = $loaisp, thutusp = $thutusp, where idsp='$idsp'";
-        mysql_query($sql);
+        if($anhsp !='')
+        {
+            $sql = "update tbchitietsp set tensp='$tensp', giasp = '$giasp', anhsp = '$anhsp', thutusp='$thutusp'" 
+            . ", motasp = '$motasp', idloaisp = '$loaisp', thutusp = '$thutusp' where idsp='$idsp'";
+        }
+        else
+        {
+            $sql = "update tbchitietsp set tensp='$tensp', giasp = '$giasp', thutusp='$thutusp'" 
+            . ", motasp = '$motasp', idloaisp = '$loaisp', thutusp = '$thutusp' where idsp='$idsp'";
+        }
+        if(mysql_query($sql) == false)
+        echo mysql_error();
         header('location:../../index.php?quanly=quanlychitietsp&action=add&id=1');
     }
     else{

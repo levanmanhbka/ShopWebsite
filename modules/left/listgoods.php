@@ -1,10 +1,21 @@
+<?php
+    $sql_loaisp = "select * from tbloaisp";
+    $run_loaisp = mysql_query($sql_loaisp);
+    if($run_loaisp == false)
+    echo mysql_error();
+?>
+
 <p class = "texttitle"> Loai San Pham</p>
 <div class = "listgoods">
     <ul>
-        <li><a href="index.php?xem=detailkind&id=1">Iphone</a></li>
-        <li><a href="#">Tablet</a></li>
-        <li><a href="#">Smartphone</a></li>
-        <li><a href="#">Camera</a></li>
+        <?php
+        while($loaisp = mysql_fetch_array($run_loaisp))
+        {
+        ?>
+            <li><a href="index.php?xem=detailkind&id=<?php echo $loaisp['id']?>"><?php echo $loaisp['ten'] ?></a></li>
+        <?php
+        }
+        ?>
     </ul>
 </div>
 

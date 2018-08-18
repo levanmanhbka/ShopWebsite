@@ -46,7 +46,7 @@
             <td>
                 <?php echo $row['thutusp']?>
             </td>
-            <td><a href="index.php?quanly=quanlychitietsp&action=edit&ids=<?php echo $row['idsp']?>">Sua</a></td>
+            <td><a href="index.php?quanly=quanlychitietsp&action=edit&idsp=<?php echo $row['idsp']?>">Sua</a></td>
             <td><a href="modules/manadetail/handle.php?idsp=<?php echo $row['idsp']?>">Xoa</a></td>
         </tr>
         <?php }?>
