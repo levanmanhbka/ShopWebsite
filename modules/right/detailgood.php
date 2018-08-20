@@ -25,5 +25,8 @@
         <tr>
             <td colspan = "2"><?php echo $item['motasp']?></td>
         </tr>
+        <a href="index.php?xem=giohang&them=<?php echo $item['idsp']?>">
+            <img src="images/bynow.jpg" alt="miss cart" width = "100px" height = "100px" style = "float:right">
+        </a>
     </table>
 </div>

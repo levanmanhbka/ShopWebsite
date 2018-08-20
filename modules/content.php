@@ -17,6 +17,9 @@
                 include('modules/right/detailkind.php');
             }else if($temp == 'detailgood'){
                 include('modules/right/detailgood.php');
+            }else if($temp == 'giohang')
+            {
+                include ('modules/right/cart.php');
             }else{
                 include("modules/right/goodsall.php");
             }
