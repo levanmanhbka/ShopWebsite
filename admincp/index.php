@@ -6,6 +6,13 @@
 <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+<?php
+    session_start();
+    if(!isset($_SESSION['login']))
+    {
+        header('location:login.php');
+    }    
+?>
     <div class = "wrapper">
         <?php
             include('modules/config.php');

@@ -12,6 +12,9 @@
         }
         else if($tmp == 'quanlychitietsp'){
             include('modules/manadetail/main.php');
+        }else if($tmp == 'logout'){
+            session_destroy();
+            header('location:login.php');
         }
     ?>
 </div>
