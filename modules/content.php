@@ -15,12 +15,28 @@
             }
             if($temp == 'detailkind'){
                 include('modules/right/detailkind.php');
-            }else if($temp == 'detailgood'){
+            }
+            else if($temp == 'detailgood'){
                 include('modules/right/detailgood.php');
-            }else if($temp == 'giohang')
+            }
+            else if($temp == 'giohang')
             {
                 include ('modules/right/cart.php');
-            }else{
+            }
+            else if($temp == 'dangky')
+            {
+                include ('modules/right/signup.php');
+            }
+            else if($temp == 'dangnhap')
+            {
+                include ('modules/right/signin.php');
+            }
+            else if($temp == 'thanhtoan')
+            {
+                include ('modules/right/purchasing.php');
+            }
+            else
+            {
                 include("modules/right/goodsall.php");
             }
         ?>

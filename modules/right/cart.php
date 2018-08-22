@@ -1,6 +1,16 @@
-<h1 width = "100%" style ="align:center">Gio Hang</h1>
 <?php
     session_start();
+?>
+<h3>
+    <?php
+        if(isset($_SESSION['loginkh']))
+        {
+            echo "Xin chao: ".$_SESSION['loginkh'];
+        }
+    ?>
+</h3>
+<h1 width = "100%" style ="align:center">Gio Hang</h1>
+<?php
     if(isset($_GET['them']) && !empty($_GET['them']))
     {
         $idsp = $_GET['them'];
@@ -74,3 +84,6 @@
 <br>
 <br>
 <h3>Tong gia tri hoa don: <?php echo $tongtien?></h3>
+<br>
+<br>
+<a style = "float:right" href="index.php?xem=thanhtoan">Thanh Toan</a>
